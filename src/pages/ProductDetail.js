@@ -94,11 +94,6 @@ const ProductDetail = () => {
             <div className="main-image">
               <img src={product.images[selectedImage]} alt={product.name} />
               {product.isNew && <span className="new-badge">New</span>}
-              {product.originalPrice > product.price && (
-                <span className="sale-badge">
-                  {Math.round((1 - product.price / product.originalPrice) * 100)}% OFF
-                </span>
-              )}
             </div>
             <div className="image-thumbnails">
               {product.images.map((image, index) => (
@@ -136,9 +131,6 @@ const ProductDetail = () => {
 
             <div className="product-price">
               <span className="current-price">₹{product.price.toLocaleString()}</span>
-              {product.originalPrice > product.price && (
-                <span className="original-price">₹{product.originalPrice.toLocaleString()}</span>
-              )}
             </div>
 
             <div className="product-description">

@@ -272,11 +272,6 @@ const Shop = () => {
                         </button>
                       </div>
                       {product.isNew && <span className="new-badge">New</span>}
-                      {product.originalPrice > product.price && (
-                        <span className="sale-badge">
-                          {Math.round((1 - product.price / product.originalPrice) * 100)}% OFF
-                        </span>
-                      )}
                     </div>
                     <div className="product-info">
                       <h3>{product.name}</h3>
@@ -293,9 +288,6 @@ const Shop = () => {
                       </div>
                       <div className="product-price">
                         <span className="current-price">₹{product.price.toLocaleString()}</span>
-                        {product.originalPrice > product.price && (
-                          <span className="original-price">₹{product.originalPrice.toLocaleString()}</span>
-                        )}
                       </div>
                       <Link to={`/product/${product.id}`} className="btn btn-outline">
                         View Details
