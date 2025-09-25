@@ -1,5 +1,5 @@
 import React from 'react';
-import { HelpCircle, Search, MessageCircle, Phone, Mail } from 'lucide-react';
+import { Search, MessageCircle, Phone, Mail } from 'lucide-react';
 import './HelpCenter.css';
 
 const HelpCenter = () => {
