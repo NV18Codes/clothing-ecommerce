@@ -7,8 +7,8 @@ import './Sustainability.css';
 const Sustainability = () => {
   const impactStats = [
     { number: '85%', label: 'Reduction in Water Usage', icon: <Leaf size={32} /> },
-    { number: '100%', label: 'Organic Cotton Used', icon: <Recycle size={32} /> },
-    { number: '50K+', label: 'Trees Planted', icon: <Globe size={32} /> },
+    { number: '100%', label: 'Organic Cotton from India', icon: <Recycle size={32} /> },
+    { number: '50K+', label: 'Trees Planted in India', icon: <Globe size={32} /> },
     { number: '0', label: 'Plastic Waste', icon: <Users size={32} /> }
   ];
 
@@ -16,8 +16,8 @@ const Sustainability = () => {
     {
       name: 'Organic Cotton',
       percentage: 60,
-      description: 'Grown without harmful pesticides, using 91% less water than conventional cotton.',
-      benefits: ['Reduced water usage', 'No harmful chemicals', 'Better for farmers', 'Biodegradable']
+      description: 'Sourced from Indian farms, grown without harmful pesticides, using 91% less water than conventional cotton.',
+      benefits: ['Reduced water usage', 'No harmful chemicals', 'Supports Indian farmers', 'Biodegradable']
     },
     {
       name: 'Recycled Polyester',

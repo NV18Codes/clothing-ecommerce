@@ -211,26 +211,26 @@ export const collections = [
 export const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    location: "New York",
+    name: "Priya Sharma",
+    location: "Bangalore",
     rating: 5,
-    comment: "Amazing quality and perfect fit! The sustainable materials make me feel good about my purchase.",
+    comment: "Amazing quality and perfect fit! The sustainable materials make me feel good about my purchase. Love supporting local Indian brands!",
     image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face"
   },
   {
     id: 2,
-    name: "Michael Chen",
-    location: "San Francisco",
+    name: "Arjun Patel",
+    location: "Mumbai",
     rating: 5,
-    comment: "Great customer service and fast shipping. The clothes are exactly as described.",
+    comment: "Great customer service and fast shipping within India. The clothes are exactly as described and perfect for Indian weather.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
   },
   {
     id: 3,
-    name: "Emily Davis",
-    location: "London",
+    name: "Kavya Reddy",
+    location: "Delhi",
     rating: 4,
-    comment: "Love the design and comfort. Will definitely order again!",
+    comment: "Love the design and comfort. Will definitely order again! The Bangalore-based team really understands Indian fashion needs.",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
   }
 ];

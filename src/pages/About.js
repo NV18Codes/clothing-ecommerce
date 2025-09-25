@@ -42,9 +42,9 @@ const About = () => {
           <div className="about-hero-content">
             <h1>About Our Story</h1>
             <p>
-              Founded in 2019, we started with a simple mission: to create beautiful, 
+              Founded in 2019 in Bangalore, we started with a simple mission: to create beautiful, 
               sustainable fashion that doesn't compromise on style or ethics. Today, 
-              we're proud to be a leading force in the sustainable fashion movement.
+              we're proud to be a leading force in the sustainable fashion movement across India.
             </p>
           </div>
         </div>
@@ -57,14 +57,14 @@ const About = () => {
             <div className="mission-text">
               <h2>Our Mission</h2>
               <p>
-                To revolutionize the fashion industry by creating beautiful, sustainable 
+                To revolutionize the fashion industry in India by creating beautiful, sustainable 
                 clothing that empowers people to express their style while protecting 
                 our planet. We believe that fashion and sustainability can coexist, 
-                and we're proving it every day.
+                and we're proving it every day from our Bangalore headquarters.
               </p>
               <p>
                 Our commitment extends beyond just creating clothes. We're building a 
-                community of conscious consumers who care about the impact of their 
+                community of conscious consumers across India who care about the impact of their 
                 choices on the environment and society.
               </p>
               <Link to="/sustainability" className="btn btn-primary">

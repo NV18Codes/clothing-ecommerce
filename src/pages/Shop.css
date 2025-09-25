@@ -355,6 +355,25 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+/* Filtered product styling */
+.product-card.filtered {
+  background: #f8f9fa;
+  border: 2px solid #007bff;
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.15);
+}
+
+.product-card.filtered .product-info h3 {
+  color: #007bff;
+}
+
+.product-card.filtered .current-price {
+  color: #007bff;
 }
 
 .product-card:hover {
@@ -410,6 +429,15 @@
   justify-content: center;
   cursor: pointer;
   transition: transform 0.3s ease;
+}
+
+.wishlist-btn.active {
+  background: #ffeaea;
+  border: 2px solid #e74c3c;
+}
+
+.wishlist-btn.active svg {
+  color: #e74c3c;
 }
 
 .wishlist-btn:hover,

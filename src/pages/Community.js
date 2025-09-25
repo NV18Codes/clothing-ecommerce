@@ -10,13 +10,13 @@ const Community = () => {
     {
       id: 1,
       user: {
-        name: 'Sarah Johnson',
+        name: 'Priya Sharma',
         avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face',
-        location: 'New York'
+        location: 'Bangalore'
       },
       image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop',
       title: 'My Sustainable Fashion Journey',
-      content: 'I\'ve been shopping with this brand for over a year now, and I love how every piece makes me feel confident while knowing I\'m making a positive impact on the environment.',
+      content: 'I\'ve been shopping with this Bangalore-based brand for over a year now, and I love how every piece makes me feel confident while knowing I\'m making a positive impact on the environment.',
       likes: 42,
       comments: 8,
       date: '2024-01-15',
@@ -25,13 +25,13 @@ const Community = () => {
     {
       id: 2,
       user: {
-        name: 'Michael Chen',
+        name: 'Arjun Patel',
         avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
-        location: 'San Francisco'
+        location: 'Mumbai'
       },
       image: 'https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=600&h=400&fit=crop',
       title: 'Perfect Office Look',
-      content: 'This blazer is perfect for my office meetings. The quality is outstanding and it fits like a dream. Highly recommend!',
+      content: 'This blazer is perfect for my Mumbai office meetings. The quality is outstanding and it fits like a dream. Highly recommend!',
       likes: 28,
       comments: 5,
       date: '2024-01-12',
@@ -40,9 +40,9 @@ const Community = () => {
     {
       id: 3,
       user: {
-        name: 'Emily Davis',
+        name: 'Kavya Reddy',
         avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
-        location: 'London'
+        location: 'Delhi'
       },
       image: 'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&h=400&fit=crop',
       title: 'Summer Collection Love',
@@ -60,7 +60,7 @@ const Community = () => {
       title: 'Sustainable Fashion Workshop',
       date: '2024-02-15',
       time: '2:00 PM - 4:00 PM',
-      location: 'New York Fashion Center',
+      location: 'Bangalore Fashion Center',
       description: 'Join us for an interactive workshop on sustainable fashion practices and styling tips.',
       image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=250&fit=crop'
     },
@@ -69,7 +69,7 @@ const Community = () => {
       title: 'Community Meetup',
       date: '2024-02-22',
       time: '6:00 PM - 8:00 PM',
-      location: 'San Francisco Store',
+      location: 'Mumbai Store',
       description: 'Connect with fellow fashion enthusiasts and learn about our latest sustainable initiatives.',
       image: 'https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=400&h=250&fit=crop'
     },
@@ -78,7 +78,7 @@ const Community = () => {
       title: 'Fashion Show & Launch',
       date: '2024-03-01',
       time: '7:00 PM - 9:00 PM',
-      location: 'London Fashion Week',
+      location: 'Delhi Fashion Week',
       description: 'Be the first to see our new collection at our exclusive fashion show event.',
       image: 'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=400&h=250&fit=crop'
     }

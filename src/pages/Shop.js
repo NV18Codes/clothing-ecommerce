@@ -6,7 +6,7 @@ import { products } from '../data/mockData';
 import './Shop.css';
 
 const Shop = () => {
-  const { addToCart, addToWishlist, sortBy, setSortBy, filters, setFilters } = useApp();
+  const { addToCart, addToWishlist, removeFromWishlist, wishlist, user, setShowAuthModal, sortBy, setSortBy, filters, setFilters } = useApp();
   const [viewMode, setViewMode] = useState('grid');
   const [showFilters, setShowFilters] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -16,7 +16,19 @@ const Shop = () => {
   };
 
   const handleAddToWishlist = (product) => {
+    if (!user) {
+      setShowAuthModal(true);
+      return;
+    }
     addToWishlist(product);
+  };
+
+  const handleRemoveFromWishlist = (productId) => {
+    if (!user) {
+      setShowAuthModal(true);
+      return;
+    }
+    removeFromWishlist(productId);
   };
 
   const handleFilterChange = (filterType, value) => {
@@ -253,20 +265,41 @@ const Shop = () => {
               </div>
 
               <div className={`products-grid ${viewMode}`}>
-                {filteredProducts.map(product => (
-                  <div key={product.id} className="product-card">
+                {filteredProducts.map(product => {
+                  // Check if product matches any active filters
+                  const hasActiveFilters = filters.colors.length > 0 || filters.sizes.length > 0 || filters.inStock || 
+                    (filters.priceRange[0] > 0 || filters.priceRange[1] < 10000) || selectedCategory !== 'all';
+                  
+                  return (
+                    <Link key={product.id} to={`/product/${product.id}`} className={`product-card ${hasActiveFilters ? 'filtered' : ''}`}>
                     <div className="product-image">
                       <img src={product.image} alt={product.name} />
                       <div className="product-overlay">
                         <button 
-                          className="wishlist-btn"
-                          onClick={() => handleAddToWishlist(product)}
+                          className={`wishlist-btn ${user && wishlist.some(item => item.id === product.id) ? 'active' : ''}`}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            if (!user) {
+                              setShowAuthModal(true);
+                              return;
+                            }
+                            if (wishlist.some(item => item.id === product.id)) {
+                              handleRemoveFromWishlist(product.id);
+                            } else {
+                              handleAddToWishlist(product);
+                            }
+                          }}
                         >
-                          <Heart size={20} />
+                          <Heart size={20} fill={user && wishlist.some(item => item.id === product.id) ? '#e74c3c' : 'none'} />
                         </button>
                         <button 
                           className="quick-view-btn"
-                          onClick={() => handleAddToCart(product)}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            handleAddToCart(product);
+                          }}
                         >
                           <ShoppingBag size={20} />
                         </button>
@@ -289,12 +322,10 @@ const Shop = () => {
                       <div className="product-price">
                         <span className="current-price">₹{product.price.toLocaleString()}</span>
                       </div>
-                      <Link to={`/product/${product.id}`} className="btn btn-outline">
-                        View Details
-                      </Link>
                     </div>
-                  </div>
-                ))}
+                    </Link>
+                  );
+                })}
               </div>
 
               {filteredProducts.length === 0 && (

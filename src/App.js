@@ -18,6 +18,8 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
+import HelpCenter from './pages/HelpCenter';
+import SizeGuide from './pages/SizeGuide';
 import './App.css';
 
 // Inner App component that can use context
@@ -44,6 +46,8 @@ const AppContent = () => {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/help" element={<HelpCenter />} />
+            <Route path="/size-guide" element={<SizeGuide />} />
           </Routes>
         </Layout>
         <AuthModal 

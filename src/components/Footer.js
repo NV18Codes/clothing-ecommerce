@@ -39,27 +39,27 @@ const Footer = () => {
 
           <div className="footer-section">
             <h3>Customer Service</h3>
-            <Link to="/contact">Help Center</Link>
-            <Link to="/contact">Size Guide</Link>
+            <Link to="/help">Help Center</Link>
+            <Link to="/size-guide">Size Guide</Link>
             <Link to="/contact">Shipping Info</Link>
             <Link to="/contact">Returns & Exchanges</Link>
             <Link to="/contact">Track Your Order</Link>
-            <Link to="/contact">FAQ</Link>
+            <Link to="/help">FAQ</Link>
           </div>
 
           <div className="footer-section">
             <h3>Contact Info</h3>
             <div className="contact-item">
               <MapPin size={16} />
-              <span>123 Fashion Street, Style City, SC 12345</span>
+              <span>MG Road, Brigade Road, Bangalore, Karnataka 560001</span>
             </div>
             <div className="contact-item">
               <Phone size={16} />
-              <span>+1 (555) 123-4567</span>
+              <span>+91 80 1234 5678</span>
             </div>
             <div className="contact-item">
               <Mail size={16} />
-              <span>hello@clothingstore.com</span>
+              <span>hello@clothingstore.in</span>
             </div>
           </div>
         </div>

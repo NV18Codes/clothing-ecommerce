@@ -7,7 +7,7 @@ import './ProductDetail.css';
 
 const ProductDetail = () => {
   const { id } = useParams();
-  const { addToCart, addToWishlist, wishlist } = useApp();
+  const { addToCart, addToWishlist, wishlist, user, setShowAuthModal } = useApp();
   const [product, setProduct] = useState(null);
   const [selectedImage, setSelectedImage] = useState(0);
   const [selectedSize, setSelectedSize] = useState('');
@@ -40,6 +40,10 @@ const ProductDetail = () => {
   };
 
   const handleAddToWishlist = () => {
+    if (!user) {
+      setShowAuthModal(true);
+      return;
+    }
     if (product) {
       addToWishlist(product);
     }
@@ -83,7 +87,7 @@ const ProductDetail = () => {
     );
   }
 
-  const isInWishlistProduct = wishlist.some(item => item.id === product?.id);
+  const isInWishlistProduct = user && wishlist.some(item => item.id === product?.id);
 
   return (
     <div className="product-detail">
@@ -221,7 +225,7 @@ const ProductDetail = () => {
                 <Truck size={24} />
                 <div>
                   <h4>Free Shipping</h4>
-                  <p>On orders over ₹2,999</p>
+                  <p>On orders over ₹2,999 within India</p>
                 </div>
               </div>
               <div className="feature">
@@ -258,7 +262,7 @@ const ProductDetail = () => {
                 </div>
                 <div className="detail-item">
                   <span className="label">Origin</span>
-                  <span className="value">Made in India</span>
+                  <span className="value">Made in Bangalore, India</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Sustainability</span>

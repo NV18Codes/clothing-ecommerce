@@ -31,7 +31,7 @@ const Collection = () => {
             <h1>Our Collections</h1>
             <p>
               Discover our carefully curated collections, each telling a unique story 
-              through sustainable fashion and timeless design.
+              through sustainable fashion designed for the modern Indian lifestyle.
             </p>
           </div>
         </div>

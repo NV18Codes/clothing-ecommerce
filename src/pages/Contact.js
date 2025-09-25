@@ -35,19 +35,19 @@ const Contact = () => {
     {
       icon: <MapPin size={24} />,
       title: 'Visit Our Store',
-      details: ['123 Fashion Street', 'Style City, SC 12345', 'United States'],
+      details: ['MG Road, Brigade Road', 'Bangalore, Karnataka 560001', 'India'],
       action: 'Get Directions'
     },
     {
       icon: <Phone size={24} />,
       title: 'Call Us',
-      details: ['+1 (555) 123-4567', 'Mon-Fri: 9AM-6PM', 'Sat-Sun: 10AM-4PM'],
+      details: ['+91 80 1234 5678', 'Mon-Fri: 9AM-6PM IST', 'Sat-Sun: 10AM-4PM IST'],
       action: 'Call Now'
     },
     {
       icon: <Mail size={24} />,
       title: 'Email Us',
-      details: ['hello@clothingstore.com', 'support@clothingstore.com', 'press@clothingstore.com'],
+      details: ['hello@clothingstore.in', 'support@clothingstore.in', 'press@clothingstore.in'],
       action: 'Send Email'
     },
     {
@@ -65,11 +65,11 @@ const Contact = () => {
     },
     {
       question: 'How long does shipping take?',
-      answer: 'Standard shipping takes 3-5 business days within the US. Express shipping is available for 1-2 business days. International shipping takes 7-14 business days.'
+      answer: 'Standard shipping takes 2-4 business days within India. Express shipping is available for 1-2 business days. International shipping takes 7-14 business days.'
     },
     {
       question: 'Do you offer international shipping?',
-      answer: 'Yes, we ship to over 50 countries worldwide. International shipping rates and delivery times vary by location.'
+      answer: 'Yes, we ship to over 50 countries worldwide from our Bangalore facility. International shipping rates and delivery times vary by location.'
     },
     {
       question: 'What payment methods do you accept?',

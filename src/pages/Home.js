@@ -6,7 +6,7 @@ import { products, collections, testimonials } from '../data/mockData';
 import './Home.css';
 
 const Home = () => {
-  const { addToCart, addToWishlist } = useApp();
+  const { addToCart, addToWishlist, user, setShowAuthModal } = useApp();
   const featuredProducts = products.filter(product => product.isFeatured);
 
   const handleAddToCart = (product) => {
@@ -14,6 +14,10 @@ const Home = () => {
   };
 
   const handleAddToWishlist = (product) => {
+    if (!user) {
+      setShowAuthModal(true);
+      return;
+    }
     addToWishlist(product);
   };
 
@@ -23,10 +27,10 @@ const Home = () => {
       <section className="hero">
         <div className="hero-content">
           <div className="hero-text">
-            <h1>Sustainable Fashion for Modern Living</h1>
+            <h1>Sustainable Fashion for Modern India</h1>
             <p>
               Discover our curated collection of ethically made, 
-              environmentally conscious clothing that doesn't compromise on style.
+              environmentally conscious clothing designed for the Indian lifestyle.
             </p>
             <div className="hero-actions">
               <Link to="/shop/men" className="btn btn-primary">
@@ -56,19 +60,27 @@ const Home = () => {
           </div>
           <div className="products-grid">
             {featuredProducts.map(product => (
-              <div key={product.id} className="product-card">
+              <Link key={product.id} to={`/product/${product.id}`} className="product-card">
                 <div className="product-image">
                   <img src={product.image} alt={product.name} />
                   <div className="product-overlay">
                     <button 
                       className="wishlist-btn"
-                      onClick={() => handleAddToWishlist(product)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        handleAddToWishlist(product);
+                      }}
                     >
                       <Heart size={20} />
                     </button>
                     <button 
                       className="quick-view-btn"
-                      onClick={() => handleAddToCart(product)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        handleAddToCart(product);
+                      }}
                     >
                       <ShoppingBag size={20} />
                     </button>
@@ -91,11 +103,8 @@ const Home = () => {
                   <div className="product-price">
                     <span className="current-price">₹{product.price.toLocaleString()}</span>
                   </div>
-                  <Link to={`/product/${product.id}`} className="btn btn-outline">
-                    View Details
-                  </Link>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
