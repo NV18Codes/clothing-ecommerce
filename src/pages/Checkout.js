@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CreditCard, MapPin, User, Mail, Phone, Lock, ArrowLeft } from 'lucide-react';
+import { CreditCard, MapPin, Lock, ArrowLeft } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import './Checkout.css';
 

@@ -6,7 +6,7 @@ import { products } from '../data/mockData';
 import './Shop.css';
 
 const ShopWomen = () => {
-  const { addToCart, addToWishlist, selectedCategory, setCategory, sortBy, setSortBy, filters, setFilters } = useApp();
+  const { addToCart, addToWishlist, setCategory, sortBy, setSortBy, filters, setFilters } = useApp();
   const [viewMode, setViewMode] = useState('grid');
   const [showFilters, setShowFilters] = useState(false);
   const [filteredProducts, setFilteredProducts] = useState([]);

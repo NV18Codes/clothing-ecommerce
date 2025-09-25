@@ -15,13 +15,13 @@ const Footer = () => {
               compromise on ethics or the environment.
             </p>
             <div className="social-links">
-              <a href="#" aria-label="Facebook">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
-              <a href="#" aria-label="Instagram">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
-              <a href="#" aria-label="Twitter">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                 <Twitter size={20} />
               </a>
             </div>

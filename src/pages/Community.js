@@ -242,15 +242,15 @@ const Community = () => {
               <h2>Follow Us on Social Media</h2>
               <p>Stay connected and be the first to see our latest collections and updates.</p>
               <div className="social-links">
-                <a href="#" className="social-link instagram">
+                <a href="https://instagram.com/clothingstore" target="_blank" rel="noopener noreferrer" className="social-link instagram">
                   <Instagram size={24} />
                   <span>@clothingstore</span>
                 </a>
-                <a href="#" className="social-link facebook">
+                <a href="https://facebook.com/clothingstore" target="_blank" rel="noopener noreferrer" className="social-link facebook">
                   <Facebook size={24} />
                   <span>Clothing Store</span>
                 </a>
-                <a href="#" className="social-link twitter">
+                <a href="https://twitter.com/clothingstore" target="_blank" rel="noopener noreferrer" className="social-link twitter">
                   <Twitter size={24} />
                   <span>@clothingstore</span>
                 </a>
