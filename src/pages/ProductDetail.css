@@ -331,8 +331,8 @@
 }
 
 .detail-item {
-  display: flex;
-  justify-content: space-between;
+/*   display: flex;
+  justify-content: space-between; */
   padding: 1rem;
   background: #f8f9fa;
   border-radius: 8px;

@@ -26,13 +26,13 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <div className="hero-text">
+          <div className="hero-text" style={{padding: '20px'}}>
             <h1>Sustainable Fashion for Modern India</h1>
             <p>
               Discover our curated collection of ethically made, 
               environmentally conscious clothing designed for the Indian lifestyle.
             </p>
-            <div className="hero-actions">
+            <div className="hero-actions" style={{marginTop: '20px'}}>
               <Link to="/shop/men" className="btn btn-primary">
                 Shop Men's Collection
                 <ArrowRight size={16} />
@@ -42,7 +42,7 @@ const Home = () => {
               </Link>
             </div>
           </div>
-          <div className="hero-image">
+          <div className="hero-image" style={{padding: '20px'}}>
             <img 
               src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=800&fit=crop" 
               alt="Sustainable Fashion" 
