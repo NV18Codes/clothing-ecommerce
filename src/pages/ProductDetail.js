@@ -252,20 +252,20 @@ const ProductDetail = () => {
             <div className="tab-section">
               <h3>Product Details</h3>
               <div className="details-grid">
-                <div className="detail-item">
-                  <span className="label">Material</span>
+                <div className="detail-item" >
+                  <span className="label">Material</span><br/>
                   <span className="value">100% Organic Cotton</span>
                 </div>
                 <div className="detail-item">
-                  <span className="label">Care Instructions</span>
+                  <span className="label">Care Instructions</span><br/>
                   <span className="value">Machine wash cold, tumble dry low</span>
                 </div>
                 <div className="detail-item">
-                  <span className="label">Origin</span>
+                  <span className="label">Origin</span><br/>
                   <span className="value">Made in Bangalore, India</span>
                 </div>
                 <div className="detail-item">
-                  <span className="label">Sustainability</span>
+                  <span className="label">Sustainability</span><br/>
                   <span className="value">GOTS Certified, Fair Trade</span>
                 </div>
               </div>
